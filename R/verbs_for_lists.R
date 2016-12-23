@@ -1,5 +1,5 @@
 #' @title 
-#' Dplyr verbs for lists
+#' Dplyr verbs for lists and pairlists
 #' 
 #' @description 
 #' We add methods for the verbs \code{\link[dplyr]{mutate}}, 
@@ -7,7 +7,7 @@
 #' and \code{\link[dplyr]{transmute}}. 
 #' 
 #' @param .data
-#' A list. 
+#' A list or pairlist. 
 #' 
 #' @param ...
 #' Comma separated list of unquoted expressions. 
@@ -16,7 +16,7 @@
 #' Used to work around non-standard evaluation. 
 #' 
 #' @return 
-#' A list. 
+#' A list or a pairlist. 
 #' 
 #' @seealso \code{\link[dplyr]{mutate}},  
 #' \code{\link[dplyr]{rename}}, 
@@ -29,7 +29,6 @@
 #' @export
 #' 
 #' @examples 
-#' library(dplyr)
 #' xs <- list(x1 = 1:3, 
 #'            x2 = 2:5, 
 #'            x3 = list("alpha", c("beta", "gamma")))
@@ -46,7 +45,7 @@
 #' select_(xs, ~ (-x3))
 #' transmute_(xs, x5 = ~ 5)
 #' 
-mutate_.list <-
+mutate_.list <- mutate_.pairlist <- 
 function(.data, ..., .dots)
 {
   dots <- lazyeval::all_dots(.dots, ..., all_named = TRUE)
@@ -60,7 +59,7 @@ function(.data, ..., .dots)
 #' @export
 #' @rdname mutate_.list
 #' 
-rename_.list <-
+rename_.list <- rename_.pairlist <- 
 function(.data, ..., .dots)
 {
   dots <- lazyeval::all_dots(.dots, ...)
@@ -76,7 +75,7 @@ function(.data, ..., .dots)
 #' @export
 #' @rdname mutate_.list
 #' 
-select_.list <- 
+select_.list <- select_.pairlist <- 
 function(.data, ..., .dots)
 {
   dots <- lazyeval::all_dots(.dots, ...)
@@ -100,7 +99,7 @@ function(.data, ..., .dots)
 #' @export
 #' @rdname mutate_.list
 #' 
-transmute_.list <- 
+transmute_.list <- transmute_.pairlist <- 
 function(.data, ..., .dots)
 {
   dots <- lazyeval::all_dots(.dots, ..., all_named = TRUE)

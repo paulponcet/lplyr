@@ -5,7 +5,7 @@
 \alias{rename_.list}
 \alias{select_.list}
 \alias{transmute_.list}
-\title{Dplyr verbs for lists}
+\title{Dplyr verbs for lists and pairlists}
 \usage{
 \method{mutate_}{list}(.data, ..., .dots)
 
@@ -16,14 +16,14 @@
 \method{transmute_}{list}(.data, ..., .dots)
 }
 \arguments{
-\item{.data}{A list.}
+\item{.data}{A list or pairlist.}
 
 \item{...}{Comma separated list of unquoted expressions.}
 
 \item{.dots}{Used to work around non-standard evaluation.}
 }
 \value{
-A list.
+A list or a pairlist.
 }
 \description{
 We add methods for the verbs \code{\link[dplyr]{mutate}}, 
@@ -31,7 +31,6 @@ We add methods for the verbs \code{\link[dplyr]{mutate}},
 and \code{\link[dplyr]{transmute}}.
 }
 \examples{
-library(dplyr)
 xs <- list(x1 = 1:3, 
            x2 = 2:5, 
            x3 = list("alpha", c("beta", "gamma")))
