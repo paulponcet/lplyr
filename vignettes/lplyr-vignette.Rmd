@@ -1,21 +1,21 @@
-# lplyr: dplyr verbs for lists and other verbs for data frames
+---
+title: 'The lplyr package'
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{The lplyr package}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
 
-[![Travis-CI Build Status](https://travis-ci.org/paulponcet/lplyr.svg?branch=master)](https://travis-ci.org/paulponcet/lplyr)
-
-## Installation
-
-You can install 'lplyr' from GitHub with:
-
-```R
-# install.packages("devtools")
-devtools::install_github("paulponcet/lplyr")
-```
 
 ## Verbs for lists and pairlists 
 
 The package 'lplyr' extends some dplyr verbs to lists and pairlists: 
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
+library(lplyr)
+
 xs <- list(x1 = 1:3, 
            x2 = 2:5, 
            x3 = list("alpha", c("beta", "gamma")))
@@ -25,9 +25,10 @@ rename(xs, x0 = x1)
 select(xs, -x3)
 transmute(xs, x5 = 5)
 ```
+
 Usual verbs made for standard evaluation work as well: 
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 mutate_(xs, x4 = ~ 4)
 rename_(xs, x0 = ~ x1)
 select_(xs, ~ (-x3))
@@ -37,9 +38,9 @@ transmute_(xs, x5 = ~ 5)
 
 ## New verbs for data frames
 
-The `mutate_which` and `transmute_which` functions is made for adding new variables or modifying existing ones on a subset of the data. 
+The `mutate_which` and `transmute_which` functions are made for adding new variables or modifying existing ones on a subset of the data. 
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 df <- mtcars[1:10,]
 mutate_which(df, gear==4, carb = 100)
 transmute_which(df, gear==4, carb = 100)
@@ -48,7 +49,7 @@ transmute_which(df, gear==4, carb = 100)
 There is also a standard evaluation version of these functions, 
 called `mutate_which_` and `transmute_which_`: 
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 mutate_which_(df, ~ gear==4, carb = ~ 100)
 transmute_which_(df, ~ gear==4, carb = ~ 100)
 ```
@@ -58,7 +59,7 @@ and transforms it into a vector.
 This is useful to use it in combination with 
 magrittr's pipe operator and dplyr's verbs.
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 mtcars[["mpg"]]
 mtcars %>% pull(mpg)
 
@@ -67,6 +68,7 @@ mtcars %>%
  filter(mpg > 20) %>%
  pull(3)
 ```
+
 
 ## Chunck 
 
@@ -77,7 +79,7 @@ the input dataset is returned unchanged.
 This is convenient in programming to easily test the benefit of 
 parallelizing or switch from non-parallel to parallel programming. 
 
-```R
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 options(parallelize = FALSE)
 
 mtcars %>% 
@@ -87,4 +89,3 @@ mtcars %>%
   summarise(n()) %>% 
   select(-cyl)
 ```
-
