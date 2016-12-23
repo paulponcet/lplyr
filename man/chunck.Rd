@@ -33,6 +33,10 @@ except that it adds a logical argument \code{ok};
 if \code{ok=FALSE}, no partition is applied,
 the input dataset is returned unchanged.
 }
+\author{
+Straightforward adaptation of Hadley Wickham's 
+\code{\link[multidplyr]{partition}}.
+}
 \seealso{
 \code{\link[multidplyr]{partition}} from package \pkg{multidplyr}.
 }

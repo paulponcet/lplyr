@@ -3,11 +3,17 @@
 \name{pull}
 \alias{pull}
 \alias{pull_}
+\alias{pull_.data.frame}
+\alias{pull_.list}
 \title{Column selection}
 \usage{
 pull(.data, j)
 
 pull_(.data, j)
+
+\method{pull_}{data.frame}(.data, j)
+
+\method{pull_}{list}(.data, j)
 }
 \arguments{
 \item{.data}{A tbl.}
