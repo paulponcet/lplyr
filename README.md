@@ -16,6 +16,8 @@ devtools::install_github("paulponcet/lplyr")
 The package 'lplyr' extends some dplyr verbs to lists and pairlists: 
 
 ```R
+library(lplyr)
+
 xs <- list(x1 = 1:3, 
            x2 = 2:5, 
            x3 = list("alpha", c("beta", "gamma")))
@@ -37,7 +39,7 @@ transmute_(xs, x5 = ~ 5)
 
 ## New verbs for data frames
 
-The `mutate_which` and `transmute_which` functions is made for adding new variables or modifying existing ones on a subset of the data. 
+The `mutate_which` and `transmute_which` functions are made for adding new variables or modifying existing ones on a subset of the data. 
 
 ```R
 df <- mtcars[1:10,]
