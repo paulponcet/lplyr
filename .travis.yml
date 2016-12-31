@@ -3,5 +3,6 @@
 language: R
 cache: packages
 warnings_are_errors: false
-r_github_packages: paulponcet/base2
-r_github_packages: hadley/multidplyr
+r_github_packages: 
+  - paulponcet/base2
+  - hadley/multidplyr
