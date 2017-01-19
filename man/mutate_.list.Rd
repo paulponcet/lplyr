@@ -2,18 +2,30 @@
 % Please edit documentation in R/verbs_for_lists.R
 \name{mutate_.list}
 \alias{mutate_.list}
+\alias{mutate_.pairlist}
 \alias{rename_.list}
+\alias{rename_.pairlist}
 \alias{select_.list}
+\alias{select_.pairlist}
 \alias{transmute_.list}
+\alias{transmute_.pairlist}
 \title{Dplyr verbs for lists and pairlists}
 \usage{
 \method{mutate_}{list}(.data, ..., .dots)
 
+\method{mutate_}{pairlist}(.data, ..., .dots)
+
 \method{rename_}{list}(.data, ..., .dots)
+
+\method{rename_}{pairlist}(.data, ..., .dots)
 
 \method{select_}{list}(.data, ..., .dots)
 
+\method{select_}{pairlist}(.data, ..., .dots)
+
 \method{transmute_}{list}(.data, ..., .dots)
+
+\method{transmute_}{pairlist}(.data, ..., .dots)
 }
 \arguments{
 \item{.data}{A list or pairlist.}

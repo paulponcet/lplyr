@@ -76,7 +76,9 @@ function(.data,
          .dots)
 {
   dots <- lazyeval::all_dots(.dots, ..., all_named = TRUE)
-
+  expr <- lazyeval::all_dots(.condition)[[1]]$expr
+  .condition <- eval(expr, .data, parent.frame())#, parent.frame())#, envir = list(.data, parent.frame()))
+  
   # New variables are initialized to NA
   n <- setdiff(names(dots), names(.data))
   .data[, n] <- NA

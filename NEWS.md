@@ -1,3 +1,8 @@
+# lplyr 0.1.2
+
+* 'fuse' function added
+
+
 # lplyr 0.1.1
 
 * Dplyr verbs added for pairlists

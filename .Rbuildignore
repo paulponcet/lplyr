@@ -2,4 +2,5 @@
 ^\.Rproj\.user$
 .travis.yml
 ^cran-comments\.md$
+inst/doc
 TODO

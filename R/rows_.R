@@ -5,9 +5,6 @@ rows_ <-
 function(.condition, 
          .data)
 {
-  expr <- lazyeval::all_dots(.condition)[[1]]$expr
-  .condition <- eval(expr, .data)
-
   n <- nrow(.data)
   if (missing(.condition) || is.null(.condition)) {
     w <- seq_len(n)

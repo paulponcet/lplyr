@@ -1,6 +1,5 @@
 .Rproj.user
 .Rhistory
 .RData
-vignettes/lplyr-vignette.html
-vignettes/lplyr-vignette.R
+inst/doc
 TODO

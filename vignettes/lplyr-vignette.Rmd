@@ -10,6 +10,7 @@ vignette: >
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(dplyr)
 library(lplyr)
 ```
 
@@ -67,8 +68,8 @@ df %>% pull(mpg)
 
 # more convenient than (mtcars %>% filter(mpg > 20))[[3L]]
 df %>%
- filter(mpg > 20) %>%
- pull(3)
+  filter(mpg > 20) %>%
+  pull(3)
 ```
 
 
