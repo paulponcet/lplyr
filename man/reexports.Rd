@@ -21,7 +21,7 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{base2}{\code{\link[base2]{concat}}, \code{\link[base2]{concat0}}, \code{\link[base2]{concat_}}}
+  \item{bazar}{\code{\link[bazar]{concat}}, \code{\link[bazar]{concat0}}, \code{\link[bazar]{concat_}}}
 
   \item{dplyr}{\code{\link[dplyr]{mutate}}, \code{\link[dplyr]{mutate_}}, \code{\link[dplyr]{rename}}, \code{\link[dplyr]{rename_}}, \code{\link[dplyr]{select}}, \code{\link[dplyr]{select_}}, \code{\link[dplyr]{transmute}}, \code{\link[dplyr]{transmute_}}}
 

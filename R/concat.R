@@ -1,18 +1,18 @@
 
-#' @importFrom base2 concat
+#' @importFrom bazar concat
 #' @export
 #' 
-base2::concat
+bazar::concat
 
 
-#' @importFrom base2 concat0
+#' @importFrom bazar concat0
 #' @export
 #' 
-base2::concat0
+bazar::concat0
 
 
-#' @importFrom base2 concat_
+#' @importFrom bazar concat_
 #' @export
 #' 
-base2::concat_
+bazar::concat_
 

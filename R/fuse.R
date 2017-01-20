@@ -32,7 +32,7 @@
 #' \code{\link[tidyr]{unite}} and  
 #' \code{\link[tidyr]{unite_}} from package \pkg{tidyr}; 
 #' 
-#' \code{\link[base2]{concat0}} from package \pkg{base2}. 
+#' \code{\link[bazar]{concat0}} from package \pkg{bazar}. 
 #' 
 #' @importFrom dplyr select_vars
 #' @export

@@ -1,5 +1,5 @@
 
-#' @importFrom base2 is.wholenumber
+#' @importFrom bazar is.wholenumber
 #' 
 rows_ <- 
 function(.condition, 
@@ -12,7 +12,7 @@ function(.condition,
     w <- which(.condition)
   } else if (is.logical(.condition) && length(.condition)==1L) {
     w <- which(rep(.condition, n))
-  } else if (base2::is.wholenumber(.condition)) {
+  } else if (bazar::is.wholenumber(.condition)) {
     w <- .condition
   } else {
     stop("incorrect '.condition' argument")

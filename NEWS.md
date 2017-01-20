@@ -1,3 +1,8 @@
+# lplyr 0.1.3
+
+* Changed 'base2' for 'bazar'
+
+
 # lplyr 0.1.2
 
 * 'fuse' function added
