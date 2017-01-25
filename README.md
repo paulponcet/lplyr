@@ -71,9 +71,9 @@ mtcars %>%
  pull(3)
 ```
 
-## Chunck 
+## Chunk 
 
-The function `chunck` is identical to the `partition` function 
+The function `chunk` is identical to the `partition` function 
 from package 'multidplyr', except that it adds a logical argument 
 `ok`: if `ok=FALSE`, no partition is applied, 
 the input dataset is returned unchanged.
@@ -84,7 +84,7 @@ parallelizing or switch from non-parallel to parallel programming.
 options(parallelize = FALSE)
 
 mtcars %>% 
-  chunck(ok = getOption("parallelize")) %>% 
+  chunk(ok = getOption("parallelize")) %>% 
   mutate(cyl2 = 2 * cyl) %>% 
   filter(vs == 1) %>% 
   summarise(n()) %>% 
