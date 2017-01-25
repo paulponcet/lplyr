@@ -61,10 +61,18 @@ function(.data,
          j)
 {
   j <- if (lazyeval::is_formula(j)) as.character(lazyeval::f_rhs(j)) else j
-  if (is.matrix(.data)) {
-    .data <- as.data.frame(.data)
-  }
   .data[, j, drop = FALSE][[1L]]
+}
+
+
+#' @export
+#' @rdname pull
+#'
+pull_.matrix <- 
+function(.data, 
+         j)
+{
+  pull_(as.data.frame(.data))
 }
 
 

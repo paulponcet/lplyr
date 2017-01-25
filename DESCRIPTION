@@ -1,13 +1,14 @@
 Package: lplyr
 Type: Package
-Title: Dplyr verbs for lists and other verbs for data frames
-Version: 0.1.3
-Date: 2017-01-20
+Title: 'dplyr' Verbs for Lists and Other Verbs for Data Frames
+Version: 0.1.7
+Date: 2017-01-25
 Authors@R: person("Paul", "Poncet", , "paulponcet@yahoo.fr", role = c("aut", "cre"))
-Description: This package provides dplyr verbs for lists and other useful 
+Description: Provides 'dplyr' verbs for lists and other useful 
     verbs for manipulation of data frames. In particular, it includes a 
-    'mutate_which' function that mutates columns for a specific subset of 
-    rows defined by a condition. 
+    mutate_which() function that mutates columns for a specific subset of 
+    rows defined by a condition, and fuse() which is a more flexible version 
+    of 'tidyr' unite() function. 
 License: MIT + file LICENSE
 LazyData: TRUE
 Depends:
@@ -16,7 +17,7 @@ Imports:
     bazar, 
     dplyr,
     lazyeval, 
-    magrittr,
+    magrittr, 
     multidplyr
 Suggests:
     knitr, 

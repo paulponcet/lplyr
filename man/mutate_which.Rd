@@ -19,7 +19,7 @@ transmute_which_(.data, .condition, ..., .dots)
 \arguments{
 \item{.data}{A tbl or data.frame.}
 
-\item{.condition}{A .condition defining the subset on which the mutate 
+\item{.condition}{A condition defining the subset on which the mutate 
 or transmute operation applies. 
 New variables are initialized to \code{NA}.}
 

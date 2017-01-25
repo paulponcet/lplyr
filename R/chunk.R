@@ -2,7 +2,7 @@
 #' Partition data across a cluster
 #'
 #' @description
-#' The function \code{chunck} is identical to
+#' The function \code{chunk} is identical to
 #' \code{\link[multidplyr]{partition}} from package \pkg{multidplyr},
 #' except that it adds a logical argument \code{ok};
 #' if \code{ok=FALSE}, no partition is applied,
@@ -40,7 +40,7 @@
 #' @importFrom lazyeval lazy_dots
 #' @export
 #'
-chunck <-
+chunk <-
 function(.data,
          ...,
          cluster = NULL,
@@ -58,6 +58,6 @@ function(.data,
 
 
 #' @export
-#' @rdname chunck
+#' @rdname chunk
 #'
-partition_ok <- chunck
+partition_ok <- chunk

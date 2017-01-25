@@ -1,8 +1,6 @@
 # lplyr: dplyr verbs for lists and other verbs for data frames
 
-[![Travis-CI Build Status](https://travis-ci.org/paulponcet/lplyr.svg?branch=master)](https://travis-ci.org/paulponcet/lplyr)
-
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/lplyr)](http://cran.r-project.org/package=lplyr)
+[![Travis-CI Build Status](https://travis-ci.org/paulponcet/lplyr.svg?branch=master)](https://travis-ci.org/paulponcet/lplyr) [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/lplyr)](https://cran.r-project.org/package=lplyr)
 
 
 ## Installation

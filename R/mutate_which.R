@@ -16,7 +16,7 @@
 #' A tbl or data.frame. 
 #' 
 #' @param .condition
-#' A .condition defining the subset on which the mutate 
+#' A condition defining the subset on which the mutate 
 #' or transmute operation applies. 
 #' New variables are initialized to \code{NA}. 
 #' 
@@ -26,6 +26,9 @@
 #' @param .dots
 #' Used to work around non-standard evaluation.
 #' 
+#' @return 
+#' A tbl or a data frame, depending on the class of \code{.data}. 
+#' 
 #' @author 
 #' Adapted from G. Grothendieck on StackOverflow, see 
 #' \url{http://stackoverflow.com/a/34096575}. 
@@ -34,9 +37,6 @@
 #' \code{\link[dplyr]{mutate_}}, 
 #' \code{\link[dplyr]{transmute}},  
 #' \code{\link[dplyr]{transmute_}} from package \pkg{dplyr}. 
-#' 
-#' @return 
-#' A tbl or a data frame, depending on the class of \code{.data}. 
 #' 
 #' @importFrom dplyr mutate_
 #' @importFrom lazyeval lazy_dots

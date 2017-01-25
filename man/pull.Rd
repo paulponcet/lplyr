@@ -5,6 +5,7 @@
 \alias{pull_}
 \alias{pull_.data.frame}
 \alias{pull_.list}
+\alias{pull_.matrix}
 \title{Column selection}
 \usage{
 pull(.data, j)
@@ -12,6 +13,8 @@ pull(.data, j)
 pull_(.data, j)
 
 \method{pull_}{data.frame}(.data, j)
+
+\method{pull_}{matrix}(.data, j)
 
 \method{pull_}{list}(.data, j)
 }
