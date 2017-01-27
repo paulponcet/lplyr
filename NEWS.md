@@ -1,3 +1,8 @@
+# lplyr 0.1.8
+
+* take() funtion added
+
+
 # lplyr 0.1.7
 
 * Issue #2: chunck() now renamed chunk()
