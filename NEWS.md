@@ -1,12 +1,13 @@
 # lplyr 0.1.8
 
-* take() funtion added
+* take() function added
 
 
 # lplyr 0.1.7
 
 * Issue #2: chunck() now renamed chunk()
-* mutate_if_which() removed for now (not ready yet)
+* mutate_if_which() removed for now (not ready yet, 
+and adequate name to be found)
 
 
 # lplyr 0.1.6
