@@ -25,16 +25,12 @@ xs <- list(x1 = 1:3,
            
 mutate(xs, x4 = 4)
 rename(xs, x0 = x1)
-select(xs, -x3)
-transmute(xs, x5 = 5)
 ```
 Usual verbs made for standard evaluation work as well: 
 
 ```R
 mutate_(xs, x4 = ~ 4)
 rename_(xs, x0 = ~ x1)
-select_(xs, ~ (-x3))
-transmute_(xs, x5 = ~ 5)
 ```
 
 
@@ -70,24 +66,3 @@ mtcars %>%
  filter(mpg > 20) %>%
  pull(3)
 ```
-
-## Chunk 
-
-The function `chunk` is identical to the `partition` function 
-from package 'multidplyr', except that it adds a logical argument 
-`ok`: if `ok=FALSE`, no partition is applied, 
-the input dataset is returned unchanged.
-This is convenient in programming to easily test the benefit of 
-parallelizing or switch from non-parallel to parallel programming. 
-
-```R
-options(parallelize = FALSE)
-
-mtcars %>% 
-  chunk(ok = getOption("parallelize")) %>% 
-  mutate(cyl2 = 2 * cyl) %>% 
-  filter(vs == 1) %>% 
-  summarise(n()) %>% 
-  select(-cyl)
-```
-
