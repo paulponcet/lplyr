@@ -1,8 +1,8 @@
 Package: lplyr
 Type: Package
 Title: 'dplyr' Verbs for Lists and Other Verbs for Data Frames
-Version: 0.1.8
-Date: 2017-01-26
+Version: 0.1.12
+Date: 2017-11-03
 Authors@R: person("Paul", "Poncet", , "paulponcet@yahoo.fr", role = c("aut", "cre"))
 Description: Provides 'dplyr' verbs for lists and other useful 
     verbs for manipulation of data frames. In particular, it includes a 
@@ -17,14 +17,14 @@ Imports:
     bazar, 
     dplyr,
     lazyeval, 
-    magrittr, 
-    multidplyr
+    magrittr
 Suggests:
     knitr, 
     rmarkdown,
     testthat, 
     tidyr
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
 URL: https://github.com/paulponcet/lplyr
 BugReports: https://github.com/paulponcet/lplyr/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

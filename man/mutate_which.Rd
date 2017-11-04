@@ -52,14 +52,13 @@ mutate_which_(df, ~ gear==4, carb = ~ 100)
 transmute_which_(df, ~ gear==4, carb = ~ 100)
 
 }
-\author{
-Adapted from G. Grothendieck on StackOverflow, see 
-\url{http://stackoverflow.com/a/34096575}.
-}
 \seealso{
 \code{\link[dplyr]{mutate}},  
 \code{\link[dplyr]{mutate_}}, 
 \code{\link[dplyr]{transmute}},  
 \code{\link[dplyr]{transmute_}} from package \pkg{dplyr}.
 }
-
+\author{
+Adapted from G. Grothendieck on StackOverflow, see 
+\url{http://stackoverflow.com/a/34096575}.
+}

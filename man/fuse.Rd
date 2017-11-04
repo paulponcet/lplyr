@@ -54,4 +54,3 @@ fuse(df, "z", x, y, fun = function(x) concat0(x, na.rm = FALSE))
 
 \code{\link[bazar]{concat0}} from package \pkg{bazar}.
 }
-

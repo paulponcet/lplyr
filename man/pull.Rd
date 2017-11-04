@@ -4,8 +4,8 @@
 \alias{pull}
 \alias{pull_}
 \alias{pull_.data.frame}
-\alias{pull_.list}
 \alias{pull_.matrix}
+\alias{pull_.list}
 \title{Column selection}
 \usage{
 pull(.data, j)
@@ -47,4 +47,3 @@ mtcars \%>\%
 Adapted from Tommy O' Dell, 
 see \url{http://stackoverflow.com/a/24730843/3902976} on StackOverflow.
 }
-

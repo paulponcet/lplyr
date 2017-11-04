@@ -42,4 +42,3 @@ take_(df, ~ cyl \%in\% c(4, 6), .dots = c("mpg", "disp"))
 \code{\link[dplyr]{filter}} and \code{\link[dplyr]{select}} 
 from package \pkg{dplyr}.
 }
-

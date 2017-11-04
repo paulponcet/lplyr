@@ -5,10 +5,6 @@
 \alias{mutate_.pairlist}
 \alias{rename_.list}
 \alias{rename_.pairlist}
-\alias{select_.list}
-\alias{select_.pairlist}
-\alias{transmute_.list}
-\alias{transmute_.pairlist}
 \title{Dplyr verbs for lists and pairlists}
 \usage{
 \method{mutate_}{list}(.data, ..., .dots)
@@ -18,14 +14,6 @@
 \method{rename_}{list}(.data, ..., .dots)
 
 \method{rename_}{pairlist}(.data, ..., .dots)
-
-\method{select_}{list}(.data, ..., .dots)
-
-\method{select_}{pairlist}(.data, ..., .dots)
-
-\method{transmute_}{list}(.data, ..., .dots)
-
-\method{transmute_}{pairlist}(.data, ..., .dots)
 }
 \arguments{
 \item{.data}{A list or pairlist.}
@@ -39,8 +27,7 @@ A list or a pairlist.
 }
 \description{
 We add methods for the verbs \code{\link[dplyr]{mutate}}, 
-\code{\link[dplyr]{rename}}, \code{\link[dplyr]{select}}, 
-and \code{\link[dplyr]{transmute}}.
+\code{\link[dplyr]{rename}}.
 }
 \examples{
 xs <- list(x1 = 1:3, 
@@ -50,20 +37,13 @@ xs <- list(x1 = 1:3,
 # Non-standard evaluation
 mutate(xs, x4 = 4)
 rename(xs, x0 = x1)
-select(xs, -x3)
-transmute(xs, x5 = 5)
 
 # Standard evaluation
 mutate_(xs, x4 = ~ 4)
 rename_(xs, x0 = ~ x1)
-select_(xs, ~ (-x3))
-transmute_(xs, x5 = ~ 5)
 
 }
 \seealso{
 \code{\link[dplyr]{mutate}},  
-\code{\link[dplyr]{rename}}, 
-\code{\link[dplyr]{select}},  
-\code{\link[dplyr]{transmute}} from package \pkg{dplyr}.
+\code{\link[dplyr]{rename}} from package \pkg{dplyr}.
 }
-

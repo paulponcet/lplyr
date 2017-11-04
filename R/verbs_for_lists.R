@@ -3,8 +3,7 @@
 #' 
 #' @description 
 #' We add methods for the verbs \code{\link[dplyr]{mutate}}, 
-#' \code{\link[dplyr]{rename}}, \code{\link[dplyr]{select}}, 
-#' and \code{\link[dplyr]{transmute}}. 
+#' \code{\link[dplyr]{rename}}. 
 #' 
 #' @param .data
 #' A list or pairlist. 
@@ -19,9 +18,7 @@
 #' A list or a pairlist. 
 #' 
 #' @seealso \code{\link[dplyr]{mutate}},  
-#' \code{\link[dplyr]{rename}}, 
-#' \code{\link[dplyr]{select}},  
-#' \code{\link[dplyr]{transmute}} from package \pkg{dplyr}. 
+#' \code{\link[dplyr]{rename}} from package \pkg{dplyr}. 
 #' 
 #' @importFrom lazyeval all_dots
 #' @importFrom lazyeval lazy_eval
@@ -35,14 +32,10 @@
 #' # Non-standard evaluation
 #' mutate(xs, x4 = 4)
 #' rename(xs, x0 = x1)
-#' select(xs, -x3)
-#' transmute(xs, x5 = 5)
 #' 
 #' # Standard evaluation
 #' mutate_(xs, x4 = ~ 4)
 #' rename_(xs, x0 = ~ x1)
-#' select_(xs, ~ (-x3))
-#' transmute_(xs, x5 = ~ 5)
 #' 
 mutate_.list <- 
 function(.data, ..., .dots)
@@ -79,24 +72,24 @@ function(.data, ..., .dots)
 rename_.pairlist <- rename_.list
 
 
-#' @importFrom dplyr select_vars_
-#' @importFrom lazyeval all_dots
-#' @export
-#' @rdname mutate_.list
-#' 
-select_.list <-  
-function(.data, ..., .dots)
-{
-  dots <- lazyeval::all_dots(.dots, ...)
-  vars <- dplyr::select_vars_(names(.data), dots)
-  .data[vars]
-}
+# #' @importFrom dplyr select_vars_
+# #' @importFrom lazyeval all_dots
+# #' @export
+# #' @rdname mutate_.list
+# #' 
+# select_.list <-  
+# function(.data, ..., .dots)
+# {
+#   dots <- lazyeval::all_dots(.dots, ...)
+#   vars <- dplyr::select_vars_(names(.data), dots)
+#   .data[vars]
+# }
 
 
-#' @export
-#' @rdname mutate_.list
-#' 
-select_.pairlist <- select_.list
+# #' @export
+# #' @rdname mutate_.list
+# #' 
+# select_.pairlist <- select_.list
 
 
 # todo
@@ -108,23 +101,23 @@ select_.pairlist <- select_.list
 #}
 
 
-#' @importFrom dplyr mutate_
-#' @importFrom dplyr select_
-#' @importFrom lazyeval all_dots
-#' @export
-#' @rdname mutate_.list
-#' 
-transmute_.list <-  
-function(.data, ..., .dots)
-{
-  dots <- lazyeval::all_dots(.dots, ..., all_named = TRUE)
-  out <- dplyr::mutate_(.data, .dots = dots)
-  keep <- names(dots)
-  dplyr::select_(out, .dots = keep)
-}
+# #' @importFrom dplyr mutate_
+# #' @importFrom dplyr select_
+# #' @importFrom lazyeval all_dots
+# #' @export
+# #' @rdname mutate_.list
+# #' 
+# transmute_.list <-  
+# function(.data, ..., .dots)
+# {
+#   dots <- lazyeval::all_dots(.dots, ..., all_named = TRUE)
+#   out <- dplyr::mutate_(.data, .dots = dots)
+#   keep <- names(dots)
+#   dplyr::select_(out, .dots = keep)
+# }
 
 
-#' @export
-#' @rdname mutate_.list
-#' 
-transmute_.pairlist <- transmute_.list
+# #' @export
+# #' @rdname mutate_.list
+# #' 
+# transmute_.pairlist <- transmute_.list
