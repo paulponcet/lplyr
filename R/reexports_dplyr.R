@@ -11,6 +11,12 @@ dplyr::mutate
 dplyr::mutate_
 
 
+#' @importFrom dplyr pull
+#' @export
+#' 
+dplyr::pull
+
+
 #' @importFrom dplyr rename
 #' @export
 #' 
